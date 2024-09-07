@@ -3,7 +3,7 @@ on:
     push:
 
 jobs:
-    dockerhub:
+    dockerhub-push:
         runs-on: ubuntu-latest
         steps:
             - name: Checkout repository
