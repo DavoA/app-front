@@ -1,4 +1,4 @@
-name: Frontend image push
+name: Frontend image push 
 
 on:
   push:
