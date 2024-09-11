@@ -1,12 +1,16 @@
 name: Frontend image
+
 on:
   push:
+    branches:
+      - main  
 
 jobs:
   call-image-push:
     uses: DavoA/reusable-workflows/.github/workflows/image-push.yaml@main
     with:
+      image: app-front  
       context: ./frontend
-      tags: |
-        ${{ secrets.DOCKER_USERNAME }}/app-front:${{ github.sha }}
-        ${{ secrets.DOCKER_USERNAME }}/app-front:latest
+    secrets:
+      docker_username: ${{ secrets.DOCKER_USERNAME }}
+      docker_password: ${{ secrets.DOCKER_PASSWORD }}
