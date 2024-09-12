@@ -7,7 +7,7 @@ on:
       completed
 
 jobs:
-  Using-reusable-cd-workflow:
+  call-tag-change:
     uses: DavoA/reusable-workflows/.github/workflows/tag-change.yaml@main
     with:
       image: app-front
