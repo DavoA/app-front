@@ -11,8 +11,8 @@ jobs:
     uses: DavoA/reusable-workflows/.github/workflows/tag-change.yaml@main
     with:
       image: app-front
-      path: back-manifests
-      filename: back-deploy.yaml
+      path: front-manifests
+      filename: front-deploy.yaml
     secrets:
       dockerhub_username: ${{ secrets.DOCKER_USERNAME }}
       github_pat: ${{ secrets.PAT }}
