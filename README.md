@@ -1,2 +1,2 @@
 # app-front
-repo for kubernetes task!!!
+repo for kubernetes task
