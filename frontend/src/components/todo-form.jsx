@@ -24,7 +24,7 @@ const TodoForm = ({ saveTodo }) => {
 
     try {
       // Make a POST request to the backend API to save the todo
-      const response = await fetch('/api/todos', {  // <-- Updated to use relative path
+      const response = await fetch('http://localhost:3001/api/todos', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
