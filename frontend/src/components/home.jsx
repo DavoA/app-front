@@ -27,7 +27,7 @@ const Home = () => {
 
   const getTodos = async () => {
     try {
-      const res = await axios.get(`${API_URL}/todos`);
+      const res = await axios.get(`${API_URL}/api/todos`);
       setTodos(res.data);
     } catch (err) {
       console.log(err);
@@ -36,7 +36,7 @@ const Home = () => {
 
   const handleClick = async (id) => {
     try {
-      await axios.patch(`${API_URL}/todos/${id}`, {
+      await axios.patch(`${API_URL}/api/todos/${id}`, {
         is_complete: true,
       });
       await getTodos();
@@ -47,7 +47,7 @@ const Home = () => {
 
   const handleNewTodo = async (todo) => {
     try {
-      await axios.post(`${API_URL}/todos`, todo);
+      await axios.post(`${API_URL}/api/todos`, todo);
       await getTodos();
       setModalOpen(false);
     } catch (err) {
